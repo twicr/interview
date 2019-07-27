@@ -10,13 +10,13 @@
 * 渐进增强：以内容为主，先向低版本浏览器做兼容性处理，再完善新版本浏览器内容支持
 # JS
 ### 写一个判断数据类型的方法
-> 通过toString方法判断
+* 通过toString方法判断
 ```javascript
 function myTypeof(origin){
 	return Object.prototype.toString.call(origin).replace(/(\[object)|\]/g,"")
 }		
 ```
-> 上述方法无法判断new对象，可封装以下方法判断所有情况
+* 上述方法无法判断new对象，可封装以下方法判断所有情况
 ```javascript
 function myTypeof(origin){
 	var result = {
